@@ -131,6 +131,7 @@ export class CollectionObject extends Struct {
 @Struct.type('schema_object')
 export class SchemaObject extends Struct {
     @Struct.field(Name) declare schema_name: Name
+    @Struct.field(UInt64, {optional: true}) declare assets: UInt64
     @Struct.field(AtomicAssetsContract.Types.FORMAT, {array: true})
     declare format: AtomicAssetsContract.Types.FORMAT[]
     @Struct.field(Name, {optional: true}) declare contract: Name
